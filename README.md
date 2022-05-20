@@ -2,7 +2,7 @@
 
 ```bash
 cd /mnt/mmcblk2p4
-mkdir qinglong
+mkdir qinglong && cd qinglong
 wget https://raw.githubusercontent.com/Luxuslaerm/qinglong/main/docker-compose.yml
 
 # 启动
