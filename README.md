@@ -1,3 +1,4 @@
+```bash
 mkdir qinglong
 wget https://raw.githubusercontent.com/Luxuslaerm/qinglong/main/docker-compose.yml
 
@@ -5,3 +6,4 @@ wget https://raw.githubusercontent.com/Luxuslaerm/qinglong/main/docker-compose.y
 docker-compose up -d
 # 停止
 docker-compose down
+```
