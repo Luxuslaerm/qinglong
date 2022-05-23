@@ -1,0 +1,47 @@
+version: '2.0'
+services:
+##第一个青龙
+  q1:
+    image: whyour/qinglong:latest
+    container_name: ql1
+    restart: always
+    volumes:
+       - ./ql1/config:/ql/config
+       - ./ql1/scripts:/ql/scripts
+       - ./ql1/repo:/ql/repo
+       - ./ql1/log:/ql/log
+       - ./ql1/db:/ql/db
+       - ./ql1/jbot:/ql/jbot
+       - ./ql1/raw:/ql/raw
+    ports:
+       - 5801:5700
+##第二个青龙
+  q2:
+    image: whyour/qinglong:latest
+    container_name: ql2
+    restart: always
+    volumes:
+       - ./ql2/config:/ql/config
+       - ./ql2/scripts:/ql/scripts
+       - ./ql2/repo:/ql/repo
+       - ./ql2/log:/ql/log
+       - ./ql2/db:/ql/db
+       - ./ql2/jbot:/ql/jbot
+       - ./ql2/raw:/ql/raw
+    ports:
+       - 5802:5700
+##第二个青龙
+  q3:
+    image: whyour/qinglong:latest
+    container_name: ql3
+    restart: always
+    volumes:
+       - ./ql3/config:/ql/config
+       - ./ql3/scripts:/ql/scripts
+       - ./ql3/repo:/ql/repo
+       - ./ql3/log:/ql/log
+       - ./ql3/db:/ql/db
+       - ./ql3/jbot:/ql/jbot
+       - ./ql3/raw:/ql/raw
+    ports:
+       - 5803:5700
