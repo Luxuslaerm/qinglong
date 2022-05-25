@@ -29,4 +29,19 @@ services:
        - ./ql2/jbot:/ql/jbot
        - ./ql2/raw:/ql/raw
     ports:
-       - 5802:5700
+       - 5802:
+##第三个青龙
+  q3:
+    image: whyour/qinglong:latest
+    container_name: ql3
+    restart: always
+    volumes:
+       - ./ql3/config:/ql/config
+       - ./ql3/scripts:/ql/scripts
+       - ./ql3/repo:/ql/repo
+       - ./ql3/log:/ql/log
+       - ./ql3/db:/ql/db
+       - ./ql3/jbot:/ql/jbot
+       - ./ql3/raw:/ql/raw
+    ports:
+       - 5803:5700
