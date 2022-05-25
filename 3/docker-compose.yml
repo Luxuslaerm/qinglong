@@ -2,7 +2,7 @@ version: '2.0'
 services:
 ##第一个青龙
   q1:
-    image: whyour/qinglong:latest
+    image: whyour/qinglong:2.10.13
     container_name: ql1
     restart: always
     volumes:
@@ -17,7 +17,7 @@ services:
        - 5801:5700
 ##第二个青龙
   q2:
-    image: whyour/qinglong:latest
+    image: whyour/qinglong:2.10.13
     container_name: ql2
     restart: always
     volumes:
@@ -32,7 +32,7 @@ services:
        - 5802:5700
 ##第二个青龙
   q3:
-    image: whyour/qinglong:latest
+    image: whyour/qinglong:2.10.13
     container_name: ql3
     restart: always
     volumes:
