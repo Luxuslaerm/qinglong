@@ -15,7 +15,7 @@ services:
     container_name: ql2
     restart: always
     volumes:
-       - ./ql1:/ql/data
+       - ./ql2:/ql/data
     ports:
        - 5802:5700
 ##第三个青龙
