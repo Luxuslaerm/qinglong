@@ -6,13 +6,7 @@ services:
     container_name: ql1
     restart: always
     volumes:
-       - ./ql1/config:/ql/config
-       - ./ql1/scripts:/ql/scripts
-       - ./ql1/repo:/ql/repo
-       - ./ql1/log:/ql/log
-       - ./ql1/db:/ql/db
-       - ./ql1/jbot:/ql/jbot
-       - ./ql1/raw:/ql/raw
+       - ./ql1:/ql/data
     ports:
        - 5801:5700
 ##第二个青龙
@@ -21,12 +15,24 @@ services:
     container_name: ql2
     restart: always
     volumes:
-       - ./ql2/config:/ql/config
-       - ./ql2/scripts:/ql/scripts
-       - ./ql2/repo:/ql/repo
-       - ./ql2/log:/ql/log
-       - ./ql2/db:/ql/db
-       - ./ql2/jbot:/ql/jbot
-       - ./ql2/raw:/ql/raw
+       - ./ql1:/ql/data
     ports:
        - 5802:5700
+##第三个青龙
+  q3:
+    image: whyour/qinglong:2.10.13
+    container_name: ql3
+    restart: always
+    volumes:
+       - ./ql3:/ql/data
+    ports:
+       - 5803:5700
+##第四个青龙
+  q4:
+    image: whyour/qinglong:2.10.13
+    container_name: ql4
+    restart: always
+    volumes:
+       - ./ql4:/ql/data
+    ports:
+       - 5804:5700
