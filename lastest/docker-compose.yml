@@ -27,3 +27,12 @@ services:
        - ./ql3:/ql/data
     ports:
        - 5803:5700
+ ##第四个青龙
+  q4:
+    image: whyour/qinglong:latest
+    container_name: ql4
+    restart: always
+    volumes:
+       - ./ql4:/ql/data
+    ports:
+       - 5804:5700
