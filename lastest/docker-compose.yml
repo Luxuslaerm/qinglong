@@ -18,6 +18,8 @@ services:
        - ./ql2:/ql/data
     ports:
        - 5802:5700
+    depends_on:
+       - q1
 ##第三个青龙
   q3:
     image: whyour/qinglong:latest
@@ -27,6 +29,8 @@ services:
        - ./ql3:/ql/data
     ports:
        - 5803:5700
+    depends_on:
+       - q2
  ##第四个青龙
   q4:
     image: whyour/qinglong:latest
@@ -36,3 +40,5 @@ services:
        - ./ql4:/ql/data
     ports:
        - 5804:5700
+    depends_on:
+       - q3
